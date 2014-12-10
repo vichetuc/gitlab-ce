@@ -21,7 +21,7 @@ module Gitlab
       end
 
       def name
-        (info.name || full_name).to_s.force_encoding('utf-8')
+        (info.name || full_name).to_s.force_encoding('utf-8').split(';')[0]
       end
 
       def full_name
@@ -43,7 +43,11 @@ module Gitlab
       # Get the first part of the email address (before @)
       # In addtion in removes illegal characters
       def generate_username
-        email.match(/^[^@]*/)[0].parameterize
+	if uid.match(/[^@]*$/)[0].downcase.eql? "unl.edu"
+		uid.match(/^[^@]*/)[0].parameterize
+	else
+		uid.parameterize
+	end
       end
 
       def generate_temporarily_email
