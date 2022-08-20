@@ -23,10 +23,10 @@ gem "pg", group: :postgres
 # Auth
 gem "devise", '3.2.4'
 gem "devise-async", '0.9.0'
-gem 'omniauth', "~> 1.1.3"
+gem 'omniauth', '~> 2.0.0'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
-gem 'omniauth-github'
+gem 'omniauth-github', '>= 2.0.0'
 gem 'omniauth-shibboleth'
 
 # Extracting information from a git repository
@@ -37,7 +37,7 @@ gem "gitlab_git", '~> 6.0'
 gem 'gitlab-grack', '~> 2.0.0.pre', require: 'grack'
 
 # LDAP Auth
-gem 'gitlab_omniauth-ldap', '1.1.0', require: "omniauth-ldap"
+gem 'gitlab_omniauth-ldap', '2.2.0', require: "omniauth-ldap"
 
 # Git Wiki
 gem 'gollum-lib', '~> 3.0.0'
