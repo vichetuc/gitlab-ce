@@ -8,13 +8,13 @@ def linux_only(require_as)
   RUBY_PLATFORM.include?('linux') && require_as
 end
 
-gem "rails", "~> 4.1.0"
+gem "rails", "~> 5.2.8", ">= 5.2.8.1"
 
 # Make links from text
-gem 'rails_autolink', '~> 1.1'
+gem 'rails_autolink', '~> 1.1', '>= 1.1.6'
 
 # Default values for AR models
-gem "default_value_for", "~> 3.0.0"
+gem "default_value_for", "~> 3.1.0"
 
 # Supported DBs
 gem "mysql2", group: :mysql
@@ -77,7 +77,7 @@ gem "unf", group: :aws
 gem "six"
 
 # Seed data
-gem "seed-fu"
+gem "seed-fu", ">= 2.3.6"
 
 # Markdown to HTML
 gem "github-markup"
@@ -104,7 +104,7 @@ end
 gem "state_machine"
 
 # Issue tags
-gem "acts-as-taggable-on"
+gem "acts-as-taggable-on", ">= 3.1.0"
 
 # Background jobs
 gem 'slim'
@@ -185,7 +185,7 @@ gem 'request_store'
 gem "virtus"
 
 group :development do
-  gem "annotate", "~> 2.6.0.beta2"
+  gem "annotate", "~> 2.6.0.0"
   gem "letter_opener"
   gem 'quiet_assets', '~> 1.0.1'
   gem 'rack-mini-profiler', require: false
